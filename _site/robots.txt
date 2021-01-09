@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://yous.github.io/whiteglass/sitemap.xml
+Sitemap: https://junhyo-park.github.io/project/sitemap.xml
