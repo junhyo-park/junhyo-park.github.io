@@ -16,7 +16,7 @@
 title: 9966
 author: Junhyo
 description: open quotes to the world
-baseurl: "/project" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://junhyo-park.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
 timezone: UTC
