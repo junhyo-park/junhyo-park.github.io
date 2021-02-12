@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import logo from "../../static/main_icon.svg"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -9,14 +10,24 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
-        <Link to="/">{title}</Link>
+        <Link to="/"><img src={logo}></img></Link>
+        {/* <img src={logo}></img> */}
+        {/* <Link to="/"><img src="/static/main_icon.svg"></Link> */}
       </h1>
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
+      <h1 className="main-heading">
+        <Link to="/"><img src={logo}></img></Link>
+        {/* <img src={logo}></img> */}
+        {/* <Link to="/"><img src="/static/main_icon.svg"></Link> */}
+      </h1>
+    // header = (
+    //   <Link className="header-link-home" to="/">
+    //     ← home
+    //     {/* {title} */}
+    //     {/* <img src={logo}></img> */}
+    //   </Link>
     )
   }
 
@@ -25,9 +36,9 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, 
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a>Junhyo Park all rights reserved</a>
       </footer>
     </div>
   )

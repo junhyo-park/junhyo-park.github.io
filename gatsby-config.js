@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `9966`,
     author: {
-      name: `Junhyo`,
+      name: `Junhyo Park`,
       summary: ``,
     },
     description: `Junhyo's open quotes to the world`,
