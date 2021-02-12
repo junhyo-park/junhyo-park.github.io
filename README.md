@@ -1,376 +1,99 @@
-# whiteglass
+<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+<p align="center">
+  <a href="https://www.gatsbyjs.com">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby's default starter
+</h1>
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-whiteglass.svg)](https://badge.fury.io/rb/jekyll-whiteglass)
-[![Build Status](https://travis-ci.org/yous/whiteglass.svg?branch=master)](https://travis-ci.org/yous/whiteglass)
+Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-Minimal, responsive Jekyll theme for hackers.
+_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
-![whiteglass theme](screenshot.png)
+## 🚀 Quick start
 
-## Installation
+1.  **Create a Gatsby site.**
 
-Add this line to your Jekyll site's Gemfile:
+    Use the Gatsby CLI to create a new site, specifying the default starter.
 
-``` ruby
-gem "jekyll-whiteglass"
-```
+    ```shell
+    # create a new Gatsby site using the default starter
+    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    ```
 
-And add this line to your Jekyll site's `_config.yml`:
+1.  **Start developing.**
 
-``` yaml
-theme: jekyll-whiteglass
-```
+    Navigate into your new site’s directory and start it up.
 
-And then execute:
+    ```shell
+    cd my-default-starter/
+    gatsby develop
+    ```
 
-``` sh
-bundle
-```
+1.  **Open the source code and start editing!**
 
-Or install it yourself as:
+    Your site is now running at `http://localhost:8000`!
 
-``` sh
-gem install jekyll-whiteglass
-```
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
-## Quick Start
+    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-1. Go to [yous/whiteglass-template](https://github.com/yous/whiteglass-template).
-2. Click "Use this template" button, and then create a repository.
-3. Generate a personal access token on <https://github.com/settings/tokens>,
-   select `public_repo` or `repo` depending on your repository.
-4. In the settings page of your repository, go to Secrets tab
-   (`https://github.com/<user>/<repo>/settings/secrets`) and add a secret
-   `JEKYLL_PAT` with the value of token you got from 3.
-5. Push some content, then GitHub Actions will generate the site.
+## 🧐 What's inside?
 
-## Manual Setup
+A quick look at the top-level files and directories you'll see in a Gatsby project.
 
-1. Generate a new Jekyll blog:
+    .
+    ├── node_modules
+    ├── src
+    ├── .gitignore
+    ├── .prettierrc
+    ├── gatsby-browser.js
+    ├── gatsby-config.js
+    ├── gatsby-node.js
+    ├── gatsby-ssr.js
+    ├── LICENSE
+    ├── package-lock.json
+    ├── package.json
+    └── README.md
 
-   ``` sh
-   jekyll new blog --skip-bundle
-   cd blog
-   ```
+1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-2. Edit `Gemfile` to use whiteglass theme:
+2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
-   ``` ruby
-   gem "jekyll-whiteglass"
-   ```
+3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
-3. Edit `_config.yml` to use whiteglass theme and its plugins:
+4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-   ``` yaml
-   theme: jekyll-whiteglass
-   plugins:
-     - jekyll-archives
-     - jekyll-paginate
-     - jekyll-sitemap
-
-   permalink: /:year/:month/:day/:title/
-   paginate_path: /posts/:num/
-   paginate: 5
-
-   jekyll-archives:
-     enabled:
-       - categories
-       - tags
-     layout: category_archives
-     permalinks:
-       category: /categories/:name/
-       tag: /tags/:name/
-   ```
-
-4. Copy
-   [`index.html`](https://github.com/yous/whiteglass/blob/master/index.html),
-   [`about.md`](https://github.com/yous/whiteglass/blob/master/about.md),
-   [`archives.md`](https://github.com/yous/whiteglass/blob/master/archives.md),
-   [`feed.xml`](https://github.com/yous/whiteglass/blob/master/feed.xml),
-   [`robots.txt`](https://github.com/yous/whiteglass/blob/master/robots.txt),
-   [`_data/i18n.yml`](https://github.com/yous/whiteglass/blob/master/_data/i18n.yml),
-   and [`_data/navigation.yml`](https://github.com/yous/whiteglass/blob/master/_data/navigation.yml)
-   from the theme:
-
-   ``` sh
-   rm index.md
-   curl -L -O "https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml,robots.txt}"
-   curl -L --create-dirs -o _data/#1 "https://github.com/yous/whiteglass/raw/master/_data/{navigation.yml,i18n.yml}"
-   ```
-
-5. Install gems and you're good to go! The blog will be available on
-   `http://127.0.0.1:4000`.
-
-   ``` sh
-   bundle install
-   bundle exec jekyll serve
-   ```
-
-## Upgrading
-
-### From Versions < 1.9.1
-
-Copy
-[`_data/i18n.yml`](https://github.com/yous/whiteglass/blob/master/_data/i18n.yml)
-from the theme.
-
-## Deployment to GitHub Pages using Travis CI
-
-This theme uses [jekyll-archives](https://github.com/jekyll/jekyll-archives) gem
-which is [not supported by GitHub Pages](https://help.github.com/articles/configuring-jekyll-plugins/).
-If you want to use full features like categories and tags, I recommend you to
-use Travis CI or other CI services.
-
-To deploy using Travis CI, first copy the [`.travis.yml`](https://github.com/yous/whiteglass/blob/master/.travis.yml)
-of this repository. You can change `target-branch` (`gh-pages` by default) and
-`on.branch` (`master` by default) as you want. If you want further
-customization, see [Travis CI's documentation page](https://docs.travis-ci.com/user/deployment/pages/).
-
-You'll see there's `github-token: $GITHUB_TOKEN`, and this is what you should
-configure. Go to your [personal access tokens](https://github.com/settings/tokens)
-page, and generate new token with `public_repo` or `repo` permission as you
-need. Then go to Travis CI's settings page of your repository, and add a new
-environment variable `GITHUB_TOKEN` with the value of the token you generated.
-
-## Usage
-
-### Customization
-
-To override the default structure and style of whiteglass, simply create the
-concerned directory at the root of your site, copy the file you wish to
-customize to that directory, and then edit the file. e.g., to override the
-[`_includes/footer_content.html`](_includes/footer_content.html) file to add
-contents to footer, create an `_includes` directory, copy
-`_includes/footer_content.html` from jekyll-whiteglass gem folder to
-`<your-site>/_includes` and start editing that file.
-
-For example, you can add favicons to `_includes/head_custom.html`:
-
-``` html
-<link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
-<link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relative_url }}">
-<link rel="apple-touch-icon" sizes="76x76" href="{{ "/apple-touch-icon-76x76.png" | relative_url }}">
-<link rel="apple-touch-icon" sizes="120x120" href="{{ "/apple-touch-icon-120x120.png" | relative_url }}">
-<link rel="apple-touch-icon" sizes="152x152" href="{{ "/apple-touch-icon-152x152.png" | relative_url }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon-180x180.png" | relative_url }}">
-```
-
-The site's default CSS is in the gem itself,
-[`assets/main.scss`](assets/main.scss). To override the default CSS, the file
-has to exist at your site source. Do either of the following:
-
-- Create a new instance of `main.scss` at site source
-  - Create a new file `main.scss` at `<your-site>/assets/`
-  - Add the frontmatter dashes, and
-  - Add `@import "whiteglass";`, to `<your-site>/assets/main.scss`
-  - Add your custom CSS
-- Download the file from this repo
-  - Create a new file `main.scss` at `<your-site>/assets/`
-  - Copy the contents at [`assets/main.scss`](assets/main.scss) onto the `main.scss` you just created, and edit away
-- Copy directly from jekyll-whiteglass gem
-  - Go to your local jekyll-whiteglass gem installation directory (run `bundle show jekyll-whiteglass` to get the path to it)
-  - Copy the `assets/` folder from there into the root of `<your-site>`
-  - Change whatever values you want, inside `<your-site>/assets/main.scss`
-
-### Locale
-
-`site.lang` is used to declare the primary language for each web page within the
-site.
-
-`lang: en-US` sets the `lang` attribute for the site to the United States flavor
-of English, while `en-GB` would be for the United Kingdom style of English.
-Country codes are optional and the shorter variation `lang: en` is also
-acceptable. You may want to write a post in different language, then add `lang`
-attribute to the frontmatter of that post:
-
-``` yaml
-layout: post
-title: "안녕하세요"
-lang: ko
-```
-
-The date format and other fixed strings are translated using the `_data/i18n.yml` file. If your language is not yet included, feel free to open a [pull request](https://github.com/yous/whiteglass/pulls).
-
-### Description
-
-`site.description` describes the site. This is mainly used in meta descriptions
-for improving SEO. Also, you can set `description` attribute for each post:
-
-``` yaml
-layout: post
-title: Awesome Post
-description: This is an awesome post.
-```
-
-If you don't specify `post.description`, then `post.excerpt` will be used if it
-exist.
+5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-### External URL
+6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
 
-`external-url` turns the title of your post to a link. Specify a URL which you
-want to link to.
-
-``` yaml
-layout: post
-title: Jekyll whiteglass theme
-external-url: https://github.com/yous/whiteglass
-```
-
-Then the title of your post would look like a link with text
-`Jekyll whiteglass theme →`. This also applies to your blog feed.
-
-### Category
-
-Each post can have `categories` attribute. It can be a string or an array. This
-will be displayed on index, archive and each post, and provide a link to the
-archive of category.
-
-``` yaml
-layout: post
-title: Awesome Post
-categories: Misc
-```
+7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-``` yaml
-layout: post
-title: Another Awesome Post
-categories:
-  - Misc
-  - Idea
-```
-
-### Tag
-
-Each post can have `tags` attribute. It can be a string or an array. This will
-be displayed on index, archive and each post, and provide a link to the archive
-of tag.
-
-``` yaml
-layout: post
-title: Awesome Post
-tags: food
-```
-
-``` yaml
-layout: post
-title: Another Awesome Post
-tags:
-  - food
-  - trip
-```
+8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-### Feed
+9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
 
-Create `<your-site>/feed.xml` with:
+10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
-``` yaml
----
-layout: feed
----
-```
-
-If you want to use another path for feed, you can specify a non-default path via
-your site's config.
-
-``` yaml
-feed:
-  path: atom.xml
-```
+11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-Then create `<your-site>/atom.xml` with the same content of `feed.xml` above.
+12. **`README.md`**: A text file containing useful reference information about your project.
 
-### Comments
+## 🎓 Learning Gatsby
 
-whiteglass provides the ability to include your favourite commenting service, like [Disqus](https://disqus.com) or [Isso](https://posativ.org/isso).
+Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
 
-To enable comments on pages and posts:
-1. Overwrite the `_includes/custom_comments_provider.html` with your custom provider of comments.
-2. Add `comments: true` to your `_config.yml`.
+- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
-To disable comments on certain pages or posts specify `comments: false` in the front matter of the page or post.
+- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-### Metadata for SEO
+## 💫 Deploy
 
-#### Keywords
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
 
-Each post can have `keywords` attribute. This is a comma-separated list which is
-used in meta descriptions for improving SEO.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
-``` yaml
-layout: post
-title: How to configure jekyll-whiteglass
-keywords: jekyll, whiteglass, github pages
-```
-
-YAML list is also available:
-
-``` yaml
-keywords:
-  - jekyll
-  - whiteglass
-  - github pages
-```
-
-#### Twitter
-
-- `site.twitter_username` sets `twitter:site` and `twitter:creator` meta tag
-- `site.twitter_image` sets `twitter:image:src` meta tag
-- `page.twitter_card.type` sets `twitter:card` meta tag (default: `summary`)
-  - If `page.twitter_card.type` is `gallery`, it sets `twitter:image0`, `twitter:image1`, `twitter:image2` and `twitter:image3` meta tags with `page.twitter_card.image`, `page.twitter_card.image1`, `page.twitter_card.image2` and `page.twitter_card.image3`, respectively
-  - If `page.twitter_card.type` is `photo`, `page.twitter_card.width` sets `twitter:image:width` meta tag and `page.twitter_card.height` sets `twitter:image:height` meta tag
-- `page.twitter_card.creator` sets `twitter:creator` meta tag. It overrides `site.twitter_username`
-- `page.twitter_card.image` sets `twitter:image:src` meta tag if `page.twitter_card.type` is not `gallery`. It overrides `site.twitter_image`
-
-#### Facebook
-
-- `site.facebook_app_id` sets `fb:admins` meta tag
-- `site.facebook_page` sets `article:author` meta tag
-- `site.facebook_image` sets `og:image` meta tag
-- `page.facebook.image` sets `og:image` meta tag. It overrides `site.facebook_image`
-
-### Navigation
-
-To define header links, add titles and URLs under the `main` key in
-`_data/navigation.yml`:
-
-``` yaml
-main:
-  - title: "About"
-    url: /about/
-  - title: "Archives"
-    url: /archives/
-  - title: "GitHub"
-    url: https://github.com/yous/whiteglass
-```
-
-### Enabling Google Analytics
-
-To enable Google Analytics, add the following lines to your Jekyll site:
-
-``` yaml
-google_analytics: UA-NNNNNNNN-N
-```
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at
-<https://github.com/yous/whiteglass>. This project is intended to be a safe,
-welcoming space for collaboration, and contributors are expected to adhere to
-the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run
-`bundle exec jekyll serve` and open your browser at
-`http://localhost:4000/whiteglass/`. This starts a Jekyll server using your
-theme. Add pages, documents, data, etc. like normal to test your theme's
-contents. As you make modifications to your theme and to your content, your site
-will regenerate and you should see the changes in the browser after a refresh,
-just like normal.
-
-## License
-
-The theme is available as open source under the terms of the
-[MIT License](http://opensource.org/licenses/MIT).
+<!-- AUTO-GENERATED-CONTENT:END -->
