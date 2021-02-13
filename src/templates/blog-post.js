@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -63,6 +64,8 @@ const BlogPostTemplate = ({ data, location }) => {
     </Layout>
   )
 }
+
+
 
 export default BlogPostTemplate
 

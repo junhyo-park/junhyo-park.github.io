@@ -9,19 +9,17 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
+      <div className="main-heading">
         <Link to="/"><img src={logo}></img></Link>
-        {/* <img src={logo}></img> */}
-        {/* <Link to="/"><img src="/static/main_icon.svg"></Link> */}
-      </h1>
+      </div>
     )
   } else {
     header = (
-      <h1 className="main-heading">
+      <div className="main-heading">
         <Link to="/"><img src={logo}></img></Link>
         {/* <img src={logo}></img> */}
         {/* <Link to="/"><img src="/static/main_icon.svg"></Link> */}
-      </h1>
+      </div>
     // header = (
     //   <Link className="header-link-home" to="/">
     //     ← home

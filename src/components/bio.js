@@ -57,9 +57,12 @@ const Bio = () => {
       {author?.name && (
         <p>
           written by <strong>{author.name}</strong> {author?.summary || null}
-          {/* <img src={facebook}></img> */}
-          {/* <img src={instagram}></img>
-          <img src={linkedin}></img> */}
+          {`  `}
+          <a href={`https://facebook.com/jun.f8k`} target="_blank"><img src={facebook}></img></a>
+          {`      `}
+          <a href={`https://instagram.com/junhyopark_` } target="_blank"><img src={instagram}></img></a>
+          {`      `}
+          <a href={`https://linkedin.com/in/junhyopark`} target="_blank"><img src={linkedin}></img></a>
           <br/>
           tech enthusiast & interested in wellness 🌎 🏋️‍♂️ 
           {/* <a href={`https://twitter.com/${social?.twitter || ``}`}>
