@@ -67,11 +67,11 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
-      <br/>
-      <br/>
-      <FacebookProvider appId={facebookAppId} >
-        <Comments href={postUrl} width="100%" />
-      </FacebookProvider>
+      <div style={{marginTop: 60, marginBottom: 40}}>
+          <FacebookProvider appId={facebookAppId} >
+            <Comments href={postUrl} width="100%" />
+          </FacebookProvider>
+      </div>
     </Layout>
   )
 }
