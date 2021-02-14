@@ -57,14 +57,13 @@ const Bio = () => {
       {author?.name && (
         <p>
           written by <strong>{author.name}</strong> {author?.summary || null}
-          {`  `}
           <a href={`https://facebook.com/jun.f8k`} target="_blank"><img src={facebook}></img></a>
           {`      `}
           <a href={`https://instagram.com/junhyopark_` } target="_blank"><img src={instagram}></img></a>
           {`      `}
           <a href={`https://linkedin.com/in/junhyopark`} target="_blank"><img src={linkedin}></img></a>
           <br/>
-          tech enthusiast & interested in wellness 🌎 🏋️‍♂️ 
+          tech enthusiast & intersted in wellness 🌎 🏋️‍♂️ 
           {/* <a href={`https://twitter.com/${social?.twitter || ``}`}>
             You should follow them on Twitter
           </a> */}

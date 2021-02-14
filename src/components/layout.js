@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import logo from "../../static/main_icon.svg"
+import notes from "../../static/notes.svg"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -10,7 +11,12 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <div className="main-heading">
-        <Link to="/"><img src={logo}></img></Link>
+        <div id='box-left' style={{float:'left'}}>
+          <Link to="/" ><img src={logo}></img></Link>
+        </div>
+        <div id='box-right' style={{float:'right'}}>
+          <img src={notes}></img>
+        </div>
       </div>
     )
   } else {
@@ -20,12 +26,6 @@ const Layout = ({ location, title, children }) => {
         {/* <img src={logo}></img> */}
         {/* <Link to="/"><img src="/static/main_icon.svg"></Link> */}
       </div>
-    // header = (
-    //   <Link className="header-link-home" to="/">
-    //     ← home
-    //     {/* {title} */}
-    //     {/* <img src={logo}></img> */}
-    //   </Link>
     )
   }
 
