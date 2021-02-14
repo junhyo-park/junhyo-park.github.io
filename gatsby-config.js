@@ -6,7 +6,9 @@ module.exports = {
       summary: ``,
     },
     description: `Junhyo's open quotes to the world`,
-    siteUrl: `https://junhyo-park.github.io/`,
+    // siteUrl: `http://9966.netlify.app`,
+    siteUrl: process.env.MYBLOG_SITE_URL,
+    facebookAppId: process.env.MYBLOG_FACEBOOK_APP_ID,
     social: {
       facebook: `kylemathews`,
     },

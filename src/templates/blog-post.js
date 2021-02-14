@@ -5,11 +5,17 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import urljoin from 'url-join'
+import {FacebookProvider, Comments} from 'react-facebook'
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteUrl = data.site.siteMetadata.siteUrl
+  const facebookAppId = data.site.siteMetadata.facebookAppId
+  const slug = data.markdownRemark.fields.slug
   const { previous, next } = data
+  const postUrl = urljoin(siteUrl, slug)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -61,6 +67,11 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
+      <br/>
+      <br/>
+      <FacebookProvider appId={facebookAppId} >
+        <Comments href={postUrl} width="100%" />
+      </FacebookProvider>
     </Layout>
   )
 }
@@ -78,12 +89,17 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
+        facebookAppId
       }
     }
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
