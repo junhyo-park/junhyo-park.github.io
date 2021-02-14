@@ -12,7 +12,7 @@ const Layout = ({ location, title, children }) => {
     header = (
       <div className="main-heading">
         <div id='box-left' style={{float:'left'}}>
-          <Link to="/" ><img src={logo}></img></Link>
+          <Link to="/"><img src={logo}></img></Link>
         </div>
         <div id='box-right' style={{float:'right', align:'center'}}>
           <Link to="https://www.notion.so/junhyopark/notes-ecbba9771c9b4c0ab71d9ec94b4bba2e" target="_blank"><img src={notes}></img></Link>
