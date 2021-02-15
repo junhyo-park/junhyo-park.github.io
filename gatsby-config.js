@@ -5,7 +5,7 @@ module.exports = {
       name: `Junhyo Park`,
       summary: ``,
     },
-    description: `Junhyo's open quotes to the world`,
+    description: `준효의 생각 저장소`,
     siteUrl: process.env.MYBLOG_SITE_URL,
     facebookAppId: process.env.MYBLOG_FACEBOOK_APP_ID,
     // social: {
