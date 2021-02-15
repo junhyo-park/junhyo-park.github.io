@@ -69,7 +69,7 @@ const BlogPostTemplate = ({ data, location }) => {
       </nav>
       <div style={{marginTop: 60, marginBottom: 40}}>
           <FacebookProvider appId={facebookAppId} >
-            <Comments href={postUrl} width="100%" />
+            <Comments href={postUrl} data-width="100%"/>
           </FacebookProvider>
       </div>
     </Layout>
