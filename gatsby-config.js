@@ -10,7 +10,7 @@ module.exports = {
     facebookAppId: process.env.MYBLOG_FACEBOOK_APP_ID,
     // social: {
     //   facebook: `kylemathews`,
-    },
+    // },
   },
   plugins: [
     {
@@ -75,11 +75,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
 
-    // {
-    //   resolve: `gatsby-plugin-disqus`,
-    //   options: {
-    //     shortname: `junhyopark`
-    //   }
-    // },
+
   ],
 }
