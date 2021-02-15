@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="9966" />
+        <SEO title="준효의 생각 저장소" />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="9966" />
+      <SEO title="준효의 생각 저장소" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
