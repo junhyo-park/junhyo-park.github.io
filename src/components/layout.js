@@ -12,17 +12,17 @@ const Layout = ({ location, title, children }) => {
     header = (
       <div className="main-heading">
         <div id='box-left' style={{float:'left'}}>
-          <Link to="/"><img src={logo}></img></Link>
+          <Link to="/"><img src={logo} alt="blog logo going home"></img></Link>
         </div>
         <div id='box-right' style={{float:'right', align:'center'}}>
-          <Link to="https://www.notion.so/junhyopark/notes-ecbba9771c9b4c0ab71d9ec94b4bba2e" target="_blank"><img src={notes}></img></Link>
+          <Link to="https://www.notion.so/junhyopark/notes-ecbba9771c9b4c0ab71d9ec94b4bba2e" target="_blank"><img src={notes} alt="link to notes"></img></Link>
         </div>
       </div>
     )
   } else {
     header = (
       <div className="main-heading">
-        <Link to="/"><img src={logo}></img></Link>
+        <Link to="/"><img src={logo} alt="blog logo going home"></img></Link>
         {/* <img src={logo}></img> */}
         {/* <Link to="/"><img src="/static/main_icon.svg"></Link> */}
       </div>
@@ -34,9 +34,10 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, 
+        <p>© 2021, Junhyo Park all rights reserved</p>
+        {/* © {new Date().getFullYear()}, 
         {` `}
-        <a>Junhyo Park all rights reserved</a>
+        <a>Junhyo Park all rights reserved</a> */}
       </footer>
     </div>
   )

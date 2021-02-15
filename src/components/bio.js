@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 import facebook from "../../static/social_icon/facebook.svg"
 import instagram from "../../static/social_icon/instagram.svg"
@@ -35,7 +35,7 @@ const Bio = () => {
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
+  // const social = data.site.siteMetadata?.social
 
   const avatar = data?.avatar?.childImageSharp?.fixed
 
@@ -54,11 +54,11 @@ const Bio = () => {
       {author?.name && (
         <p>
           written by <strong>{author.name}</strong> {author?.summary || null}
-          <a href={`https://facebook.com/jun.f8k`} target="_blank"><img src={facebook}></img></a>
+          <Link to="https://facebook.com/jun.f8k" target="_blank"><img src={facebook} alt="Link to Facebook"></img></Link>
           {`      `}
-          <a href={`https://instagram.com/junhyopark_` } target="_blank"><img src={instagram}></img></a>
+          <Link to="https://instagram.com/junhyopark_" target="_blank"><img src={instagram} alt="Link to Instagram"></img></Link>
           {`      `}
-          <a href={`https://linkedin.com/in/junhyopark`} target="_blank"><img src={linkedin}></img></a>
+          <Link to="https://linkedin.com/in/junhyopark" target="_blank"><img src={linkedin} alt="Link to LinkedIn"></img></Link>
           <br/>
           tech enthusiast & intersted in wellness 🌎 🏋️‍♂️ 
           {/* <a href={`https://twitter.com/${social?.twitter || ``}`}>
