@@ -334,3 +334,8 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+.fb-comments {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}

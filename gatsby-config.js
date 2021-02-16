@@ -8,6 +8,7 @@ module.exports = {
     description: `준효의 생각 저장소`,
     siteUrl: process.env.MYBLOG_SITE_URL,
     facebookAppId: process.env.MYBLOG_FACEBOOK_APP_ID,
+    disqusShortname: `junhyopark`
     // social: {
     //   facebook: `kylemathews`,
     // },
@@ -26,6 +27,12 @@ module.exports = {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `junhyopark`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,

@@ -59,5 +59,10 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  }
+  },
+  "private": true,
+  "workspaces": [
+      "your-example-test-site",
+      "gatsby-plugin-disqus/lib"
+  ]
 }

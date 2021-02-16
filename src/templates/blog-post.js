@@ -6,16 +6,22 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import urljoin from 'url-join'
-import {FacebookProvider, Comments} from 'react-facebook'
+// import {FacebookProvider, Comments} from 'react-facebook'
+import { Disqus } from 'gatsby-plugin-disqus'
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const siteUrl = data.site.siteMetadata.siteUrl
-  const facebookAppId = data.site.siteMetadata.facebookAppId
+  // const facebookAppId = data.site.siteMetadata.facebookAppId
   const slug = data.markdownRemark.fields.slug
   const { previous, next } = data
-  const postUrl = urljoin(siteUrl, slug)
+  // const postUrl = urljoin(siteUrl, slug)
+  let disqusConfig = {
+    url: urljoin(siteUrl, slug),
+    identifier: data.markdownRemark.fields.slug,
+    title: data.site.siteMetadata?.title || `Title`,
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -67,11 +73,14 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
-      <div style={{marginTop: 60, marginBottom: 40}}>
-          <FacebookProvider appId={facebookAppId} >
-            <Comments href={postUrl} data-width="100%"/>
-          </FacebookProvider>
+      <div className="fb-comments">
+        <Disqus config={disqusConfig} />
       </div>
+      {/* <div className="fb-comments">
+          <FacebookProvider appId={facebookAppId} >
+            <Comments href={postUrl} width="100%" data-numposts="5" display="block"/>
+          </FacebookProvider>
+      </div> */}
     </Layout>
   )
 }

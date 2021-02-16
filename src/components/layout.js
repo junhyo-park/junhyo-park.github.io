@@ -34,7 +34,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        <p>© 2021, Junhyo Park all rights reserved</p>
+        <p style={{color:"gray"}}>© 2021, Junhyo Park all rights reserved</p>
         {/* © {new Date().getFullYear()}, 
         {` `}
         <a>Junhyo Park all rights reserved</a> */}
